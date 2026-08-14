@@ -5,7 +5,7 @@ This repository contains R code and data for building a **multilinear regression
 ## Dataset
 
 - **Source**: [UCI Machine Learning Repository – Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)
-- **Files**: `data.csv` (hourly records)
+- **Files**: `data_bikeshare.csv` (hourly records)
 - **Description**: Includes features such as season, weather, temperature, humidity, wind speed, time of day, and working day (binary) with target variables `count` total hourly rentals counts.
 
 ==========================================
