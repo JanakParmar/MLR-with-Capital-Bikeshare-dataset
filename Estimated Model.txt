@@ -1,0 +1,99 @@
+Call:
+lm(formula = count ~ factor(season) + factor(hr1) + factor(workingday) + 
+    factor(weathersit) + atemp + hum + windspeed, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-404.25  -95.77  -22.96   68.95  609.27 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         -43.2246     9.8073  -4.407 1.06e-05 ***
+factor(season)2      26.9586     5.3163   5.071 4.04e-07 ***
+factor(season)3       4.3072     6.6394   0.649   0.5165    
+factor(season)4      67.7998     4.5682  14.842  < 2e-16 ***
+factor(hr1)2        274.0746     4.9123  55.793  < 2e-16 ***
+factor(hr1)3        215.7604     4.2369  50.924  < 2e-16 ***
+factor(hr1)4        246.6294     4.7261  52.184  < 2e-16 ***
+factor(workingday)1  12.7885     3.2357   3.952 7.80e-05 ***
+factor(weathersit)2  -8.0314     3.7208  -2.159   0.0309 *  
+factor(weathersit)3 -57.4926     6.5340  -8.799  < 2e-16 ***
+factor(weathersit)4  62.9169    99.4163   0.633   0.5268    
+atemp                 8.0235     0.3029  26.493  < 2e-16 ***
+hum                  -1.5310     0.1066 -14.368  < 2e-16 ***
+windspeed             0.2962     0.2011   1.473   0.1408    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 140.4 on 8720 degrees of freedom
+Multiple R-squared:  0.549,	Adjusted R-squared:  0.5484 
+F-statistic: 816.6 on 13 and 8720 DF,  p-value: < 2.2e-16
+
+Correlation of Coefficients:
+                    (Intercept) factor(season)2 factor(season)3 factor(season)4 factor(hr1)2 factor(hr1)3 factor(hr1)4 factor(workingday)1
+factor(season)2      0.10                                                                                                                 
+factor(season)3      0.21        0.72                                                                                                     
+factor(season)4     -0.03        0.56            0.55                                                                                     
+factor(hr1)2        -0.12       -0.01           -0.01            0.00                                                                     
+factor(hr1)3        -0.26        0.17            0.19            0.03            0.30                                                     
+factor(hr1)4        -0.20        0.11            0.13            0.02            0.26         0.49                                        
+factor(workingday)1 -0.21        0.01            0.03            0.01            0.00         0.02         0.01                           
+factor(weathersit)2  0.13        0.01            0.04           -0.01           -0.03        -0.15        -0.07        -0.03              
+factor(weathersit)3  0.24       -0.02            0.01            0.04           -0.01        -0.19        -0.13        -0.02              
+factor(weathersit)4  0.00        0.01            0.00            0.02            0.01        -0.01        -0.02         0.00              
+atemp               -0.44       -0.60           -0.76           -0.30            0.01        -0.30        -0.20        -0.06              
+hum                 -0.73       -0.01           -0.05           -0.09            0.01         0.41         0.26         0.02              
+windspeed           -0.48       -0.02            0.02            0.06           -0.02        -0.10        -0.06         0.03              
+                    factor(weathersit)2 factor(weathersit)3 factor(weathersit)4 atemp hum  
+factor(season)2                                                                            
+factor(season)3                                                                            
+factor(season)4                                                                            
+factor(hr1)2                                                                               
+factor(hr1)3                                                                               
+factor(hr1)4                                                                               
+factor(workingday)1                                                                        
+factor(weathersit)2                                                                        
+factor(weathersit)3  0.30                                                                  
+factor(weathersit)4  0.02                0.02                                              
+atemp                0.04                0.06                0.02                          
+hum                 -0.35               -0.43               -0.03               -0.01      
+windspeed           -0.05               -0.15                0.00                0.08  0.27
+
+
+> print(r)
+[1] 0.7409697
+
+Analysis of Variance Table
+
+Response: count
+                     Df    Sum Sq  Mean Sq   F value    Pr(>F)    
+factor(season)        3  23524192  7841397  397.8160 < 2.2e-16 ***
+factor(hr1)           3 159893972 53297991 2703.9562 < 2.2e-16 ***
+factor(workingday)    1    565783   565783   28.7038 8.649e-08 ***
+factor(weathersit)    3   7287773  2429258  123.2430 < 2.2e-16 ***
+atemp                 1  13314530 13314530  675.4833 < 2.2e-16 ***
+hum                   1   4631207  4631207  234.9541 < 2.2e-16 ***
+windspeed             1     42762    42762    2.1695    0.1408    
+Residuals          8720 171880923    19711                        
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+ci
+                           2.5 %      97.5 %
+(Intercept)          -62.4491335 -24.0000611
+factor(season)2       16.5373668  37.3798550
+factor(season)3       -8.7075549  17.3219549
+factor(season)4       58.8451142  76.7545457
+factor(hr1)2         264.4452321 283.7039479
+factor(hr1)3         207.4550590 224.0657724
+factor(hr1)4         237.3650659 255.8936508
+factor(workingday)1    6.4456817  19.1312614
+factor(weathersit)2  -15.3250366  -0.7377971
+factor(weathersit)3  -70.3008361 -44.6843386
+factor(weathersit)4 -131.9624788 257.7962759
+atemp                  7.4298089   8.6171515
+hum                   -1.7399219  -1.3221509
+windspeed             -0.0980135   0.6904857
+
+
